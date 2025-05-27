@@ -1,40 +1,31 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, Bell, Rocket, Zap, Bot, Users } from 'lucide-react';
-
 const ComingSoon = () => {
-  const upcomingFeatures = [
-    {
-      icon: Bot,
-      title: "Advanced AI Assistant",
-      description: "Natural language bot creation with even smarter AI suggestions",
-      eta: "Q2 2024"
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Work together with your team to build and manage bots",
-      eta: "Q2 2024"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Analytics",
-      description: "Detailed insights into your bot's performance and usage",
-      eta: "Q3 2024"
-    },
-    {
-      icon: Rocket,
-      title: "Enterprise Features",
-      description: "Advanced security, compliance, and scaling features",
-      eta: "Q3 2024"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
+  const upcomingFeatures = [{
+    icon: Bot,
+    title: "Advanced AI Assistant",
+    description: "Natural language bot creation with even smarter AI suggestions",
+    eta: "Q2 2024"
+  }, {
+    icon: Users,
+    title: "Team Collaboration",
+    description: "Work together with your team to build and manage bots",
+    eta: "Q2 2024"
+  }, {
+    icon: Zap,
+    title: "Real-time Analytics",
+    description: "Detailed insights into your bot's performance and usage",
+    eta: "Q3 2024"
+  }, {
+    icon: Rocket,
+    title: "Enterprise Features",
+    description: "Advanced security, compliance, and scaling features",
+    eta: "Q3 2024"
+  }];
+  return <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-500/20 rounded-full blur-xl animate-pulse"></div>
@@ -85,7 +76,9 @@ const ComingSoon = () => {
               <span className="text-lg font-semibold">Launch Progress</span>
             </div>
             <div className="w-full bg-gray-800 rounded-full h-3 mb-4">
-              <div className="bg-gradient-to-r from-emerald-500 to-blue-500 h-3 rounded-full transition-all duration-1000" style={{ width: '78%' }}></div>
+              <div className="bg-gradient-to-r from-emerald-500 to-blue-500 h-3 rounded-full transition-all duration-1000" style={{
+              width: '78%'
+            }}></div>
             </div>
             <p className="text-sm text-gray-400">78% Complete - Almost there!</p>
           </div>
@@ -104,11 +97,7 @@ const ComingSoon = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <Input 
-                type="email" 
-                placeholder="Enter your email"
-                className="bg-gray-800 border-gray-700 text-white"
-              />
+              <Input type="email" placeholder="Enter your email" className="bg-gray-800 border-gray-700 text-white" />
               <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
                 Notify Me
               </Button>
@@ -123,8 +112,7 @@ const ComingSoon = () => {
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-8">What's Coming</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {upcomingFeatures.map((feature, index) => (
-              <Card key={index} className="bg-gray-900/50 border-gray-800 hover:border-emerald-500/50 transition-colors">
+            {upcomingFeatures.map((feature, index) => <Card key={index} className="bg-gray-900/50 border-gray-800 hover:border-emerald-500/50 transition-colors">
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <feature.icon className="w-8 h-8 text-emerald-500" />
@@ -137,27 +125,24 @@ const ComingSoon = () => {
                 <CardContent>
                   <p className="text-gray-300 text-left">{feature.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
         {/* Social Links */}
         <div className="flex justify-center gap-4">
           <Link to="/">
-            <Button variant="outline" className="border-gray-600 text-gray-300">
+            <Button variant="outline" className="border-gray-600 text-slate-950">
               Back to Home
             </Button>
           </Link>
           <Link to="/support">
-            <Button variant="outline" className="border-gray-600 text-gray-300">
+            <Button variant="outline" className="border-gray-600 text-slate-950">
               Contact Us
             </Button>
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ComingSoon;
