@@ -5,10 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Bot, Zap, Shield, Clock, Users, ArrowRight, Check, Star, Code, Layers, Settings, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+  return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Header />
       <FloatingElements />
       
@@ -28,7 +26,9 @@ const Index = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed fade-in-up" style={{animationDelay: '0.2s'}}>
+          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed fade-in-up" style={{
+          animationDelay: '0.2s'
+        }}>
             Create powerful Discord bots using our visual drag-and-drop builder with AI assistance. 
             From simple commands to complex workflows - no programming required.
           </p>
@@ -52,7 +52,9 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 fade-in-up" style={{animationDelay: '0.4s'}}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 fade-in-up" style={{
+          animationDelay: '0.4s'
+        }}>
             <Link to="/dashboard">
               <Button className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white text-xl font-semibold flex items-center space-x-3 neon-button rounded-lg px-[62px] py-[31px] group">
                 <Rocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
@@ -60,12 +62,14 @@ const Index = () => {
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
-            <Button variant="outline" className="border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 px-10 text-xl font-semibold rounded-xl neon-border py-[27px] hover:scale-105 transition-all duration-300">
+            <Button variant="outline" className="border-2 border-cyan-500/50 text-cyan-400 hover:border-cyan-400 px-10 text-xl font-semibold rounded-xl neon-border py-[27px] hover:scale-105 transition-all duration-300 bg-zinc-950 hover:bg-zinc-800">
               Watch Demo
             </Button>
           </div>
           
-          <div className="text-gray-400 text-lg fade-in-up" style={{animationDelay: '0.6s'}}>
+          <div className="text-gray-400 text-lg fade-in-up" style={{
+          animationDelay: '0.6s'
+        }}>
             Join 50,000+ Discord server owners
             <span className="block mt-3 text-3xl animate-bounce">↓</span>
           </div>
@@ -348,8 +352,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
