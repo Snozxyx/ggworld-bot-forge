@@ -1,8 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Bot, Users, Zap, Globe } from 'lucide-react';
-
 const StatsSection = () => {
   const [stats, setStats] = useState({
     totalBots: 0,
@@ -10,7 +8,6 @@ const StatsSection = () => {
     serversHosted: 0,
     commandsExecuted: 0
   });
-
   useEffect(() => {
     const animateStats = () => {
       const targets = {
@@ -19,34 +16,28 @@ const StatsSection = () => {
         serversHosted: 156789,
         commandsExecuted: 2847392
       };
-
       const duration = 2000;
       const steps = 50;
       const stepDuration = duration / steps;
-
       let currentStep = 0;
       const interval = setInterval(() => {
         currentStep++;
         const progress = currentStep / steps;
-        
         setStats({
           totalBots: Math.floor(targets.totalBots * progress),
           activeUsers: Math.floor(targets.activeUsers * progress),
           serversHosted: Math.floor(targets.serversHosted * progress),
           commandsExecuted: Math.floor(targets.commandsExecuted * progress)
         });
-
         if (currentStep >= steps) {
           clearInterval(interval);
           setStats(targets);
         }
       }, stepDuration);
     };
-
     const timer = setTimeout(animateStats, 500);
     return () => clearTimeout(timer);
   }, []);
-
   const formatNumber = (num: number) => {
     if (num >= 1000000) {
       return (num / 1000000).toFixed(1) + 'M';
@@ -56,9 +47,7 @@ const StatsSection = () => {
     }
     return num.toLocaleString();
   };
-
-  return (
-    <section className="py-20 px-6 relative">
+  return <section className="py-20 px-6 relative bg-zinc-950">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 fade-in-up">
           <h2 className="text-4xl font-bold mb-6">
@@ -114,8 +103,6 @@ const StatsSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default StatsSection;

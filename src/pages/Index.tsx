@@ -7,12 +7,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Bot, Zap, Shield, Clock, Users, ArrowRight, Check, Star, Code, Layers, Settings, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Index = () => {
   const typewriterWords = ["Without Code", "Visually", "With AI", "Instantly", "Effortlessly"];
-
-  return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+  return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Header />
       <FloatingElements />
       
@@ -33,13 +30,12 @@ const Index = () => {
           <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
             Build Discord Bots{' '}
             <br />
-            <Typewriter 
-              words={typewriterWords}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500"
-            />
+            <Typewriter words={typewriterWords} className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500" />
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed fade-in-up" style={{animationDelay: '0.2s'}}>
+          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed fade-in-up" style={{
+          animationDelay: '0.2s'
+        }}>
             Create powerful Discord bots using our visual drag-and-drop builder with AI assistance. 
             From simple commands to complex workflows - no programming required.
           </p>
@@ -63,7 +59,9 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 fade-in-up" style={{animationDelay: '0.4s'}}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 fade-in-up" style={{
+          animationDelay: '0.4s'
+        }}>
             <Link to="/login">
               <Button className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white text-xl font-semibold flex items-center space-x-3 neon-button rounded-lg px-[62px] py-[31px] group">
                 <Rocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
@@ -78,7 +76,9 @@ const Index = () => {
             </Link>
           </div>
           
-          <div className="text-gray-400 text-lg fade-in-up" style={{animationDelay: '0.6s'}}>
+          <div className="text-gray-400 text-lg fade-in-up" style={{
+          animationDelay: '0.6s'
+        }}>
             Join 50,000+ Discord server owners
             <span className="block mt-3 text-3xl animate-bounce">↓</span>
           </div>
@@ -91,7 +91,7 @@ const Index = () => {
       <StatsSection />
 
       {/* Getting Started Section */}
-      <section className="py-24 px-6 relative border-t border-emerald-500/20">
+      <section className="py-24 px-6 relative border-t border-emerald-500/20 bg-slate-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 fade-in-up">
             <h2 className="text-5xl font-bold mb-6">
@@ -140,7 +140,7 @@ const Index = () => {
       </section>
 
       {/* Features Section with Glassmorphism */}
-      <section className="py-24 px-6 relative bg-gradient-to-b from-gray-900/20 to-black">
+      <section className="py-24 px-6 relative bg-gradient-to-b from-gray-900/20 to-black bg-gray-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 fade-in-up">
             <h2 className="text-5xl font-bold mb-6">
@@ -341,7 +341,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-6 border-t border-emerald-500/20">
+      <footer className="py-16 px-6 border-t border-emerald-500/20 bg-zinc-900">
         <div className="max-w-7xl mx-auto fade-in-up">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
             <div className="flex items-center space-x-3 mb-6 md:mb-0 group hover:scale-105 transition-transform duration-300">
@@ -365,8 +365,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
