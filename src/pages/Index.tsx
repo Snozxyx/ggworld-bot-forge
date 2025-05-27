@@ -5,65 +5,67 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Bot, Zap, Shield, Clock, Users, ArrowRight, Check, Star, Code, Layers, Settings, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Index = () => {
-  return <div className="min-h-screen bg-black text-white overflow-x-hidden">
+  return (
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Header />
       <FloatingElements />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
-        <div className="text-center max-w-5xl mx-auto relative z-10">
+        <div className="text-center max-w-5xl mx-auto relative z-10 fade-in-up">
           <div className="mb-8">
-            <Badge className="bg-emerald-600/20 text-emerald-400 border border-emerald-600/30 px-6 py-3 text-base font-semibold neon-border">
+            <Badge className="bg-emerald-600/20 text-emerald-400 border border-emerald-600/30 px-6 py-3 text-base font-semibold neon-border hover:scale-105 transition-transform duration-300">
               🚀 Zero Code • Maximum Power
             </Badge>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
             Build Discord Bots{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-purple-500 animate-pulse">
               Without Code
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed fade-in-up" style={{animationDelay: '0.2s'}}>
             Create powerful Discord bots using our visual drag-and-drop builder with AI assistance. 
             From simple commands to complex workflows - no programming required.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm">
-            <div className="flex items-center space-x-3 bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700">
+          <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm stagger-children">
+            <div className="flex items-center space-x-3 bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700 hover:border-emerald-500/50 transition-colors duration-300 hover:scale-105">
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
               <span className="text-gray-300">Visual Block Builder</span>
             </div>
-            <div className="flex items-center space-x-3 bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700">
+            <div className="flex items-center space-x-3 bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700 hover:border-cyan-500/50 transition-colors duration-300 hover:scale-105">
               <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse delay-300"></div>
               <span className="text-gray-300">AI-Powered Generation</span>
             </div>
-            <div className="flex items-center space-x-3 bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700">
+            <div className="flex items-center space-x-3 bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-colors duration-300 hover:scale-105">
               <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse delay-600"></div>
               <span className="text-gray-300">One-Click Deploy</span>
             </div>
-            <div className="flex items-center space-x-3 bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700">
+            <div className="flex items-center space-x-3 bg-gray-900/50 px-4 py-2 rounded-lg border border-gray-700 hover:border-pink-500/50 transition-colors duration-300 hover:scale-105">
               <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse delay-900"></div>
               <span className="text-gray-300">Pro Code Support</span>
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 fade-in-up" style={{animationDelay: '0.4s'}}>
             <Link to="/dashboard">
-              <Button className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white text-xl font-semibold flex items-center space-x-3 neon-button rounded-lg px-[62px] py-[31px]">
-                <Rocket className="w-6 h-6" />
+              <Button className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white text-xl font-semibold flex items-center space-x-3 neon-button rounded-lg px-[62px] py-[31px] group">
+                <Rocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                 <span>Start Building Free</span>
-                <ArrowRight className="w-6 h-6" />
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
-            <Button variant="outline" className="border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 px-10 text-xl font-semibold rounded-xl neon-border py-[27px]">
+            <Button variant="outline" className="border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 px-10 text-xl font-semibold rounded-xl neon-border py-[27px] hover:scale-105 transition-all duration-300">
               Watch Demo
             </Button>
           </div>
           
-          <div className="text-gray-400 text-lg">
+          <div className="text-gray-400 text-lg fade-in-up" style={{animationDelay: '0.6s'}}>
             Join 50,000+ Discord server owners
             <span className="block mt-3 text-3xl animate-bounce">↓</span>
           </div>
@@ -76,7 +78,7 @@ const Index = () => {
       {/* Getting Started Section */}
       <section className="py-24 px-6 relative border-t border-gray-800/50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 fade-in-up">
             <h2 className="text-5xl font-bold mb-6">
               Get Started in{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
@@ -88,10 +90,10 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="text-center group">
-              <div className="w-24 h-24 bg-gradient-to-br from-emerald-600/20 to-emerald-800/20 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform duration-300 neon-border">
-                <span className="text-4xl font-bold text-emerald-400">1</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 stagger-children">
+            <div className="text-center group hover:scale-105 transition-all duration-500">
+              <div className="w-24 h-24 bg-gradient-to-br from-emerald-600/20 to-emerald-800/20 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform duration-300 neon-border group-hover:shadow-emerald-500/50 group-hover:shadow-2xl">
+                <span className="text-4xl font-bold text-emerald-400 group-hover:scale-110 transition-transform duration-300">1</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4">Choose Your Bot Type</h3>
               <p className="text-gray-400 text-lg leading-relaxed">
@@ -99,9 +101,9 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-24 h-24 bg-gradient-to-br from-cyan-600/20 to-cyan-800/20 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform duration-300 neon-border">
-                <span className="text-4xl font-bold text-cyan-400">2</span>
+            <div className="text-center group hover:scale-105 transition-all duration-500">
+              <div className="w-24 h-24 bg-gradient-to-br from-cyan-600/20 to-cyan-800/20 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform duration-300 neon-border group-hover:shadow-cyan-500/50 group-hover:shadow-2xl">
+                <span className="text-4xl font-bold text-cyan-400 group-hover:scale-110 transition-transform duration-300">2</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4">Build with Blocks or Code</h3>
               <p className="text-gray-400 text-lg leading-relaxed">
@@ -109,9 +111,9 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-24 h-24 bg-gradient-to-br from-purple-600/20 to-purple-800/20 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform duration-300 neon-border">
-                <span className="text-4xl font-bold text-purple-400">3</span>
+            <div className="text-center group hover:scale-105 transition-all duration-500">
+              <div className="w-24 h-24 bg-gradient-to-br from-purple-600/20 to-purple-800/20 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform duration-300 neon-border group-hover:shadow-purple-500/50 group-hover:shadow-2xl">
+                <span className="text-4xl font-bold text-purple-400 group-hover:scale-110 transition-transform duration-300">3</span>
               </div>
               <h3 className="text-2xl font-semibold mb-4">Deploy & Manage</h3>
               <p className="text-gray-400 text-lg leading-relaxed">
@@ -125,7 +127,7 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-24 px-6 relative bg-gradient-to-b from-gray-900/20 to-black">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 fade-in-up">
             <h2 className="text-5xl font-bold mb-6">
               Everything You Need to Build{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-purple-500">
@@ -138,7 +140,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
             <Card className="bg-gray-900/50 border-gray-800/50 hover:border-emerald-600/50 transition-all duration-500 group neon-card">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-600/20 to-emerald-800/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -300,7 +302,7 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-24 px-6 bg-gradient-to-r from-emerald-900/30 via-cyan-900/20 to-purple-900/30 border-y border-emerald-600/20">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center fade-in-up">
           <h2 className="text-5xl font-bold mb-8">
             Ready to Build Your Discord Bot?
           </h2>
@@ -308,13 +310,13 @@ const Index = () => {
             Join thousands of developers and server owners who are already building 
             amazing Discord bots with GGWorld's no-code platform. Start your journey today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center stagger-children">
             <Link to="/dashboard">
-              <Button className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white text-xl font-semibold rounded-xl neon-button mx-[20px] px-[60px] py-[42px]">
-                Start Building Now
+              <Button className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white text-xl font-semibold rounded-xl neon-button mx-[20px] px-[60px] py-[42px] group">
+                <span className="group-hover:scale-110 transition-transform duration-300">Start Building Now</span>
               </Button>
             </Link>
-            <Button variant="outline" className="border-2 border-emerald-600/50 text-emerald-400 hover:bg-emerald-600/10 hover:border-emerald-400 text-xl font-semibold rounded-xl neon-border my-0 px-[25px] py-[39px]">
+            <Button variant="outline" className="border-2 border-emerald-600/50 text-emerald-400 hover:bg-emerald-600/10 hover:border-emerald-400 text-xl font-semibold rounded-xl neon-border my-0 px-[25px] py-[39px] hover:scale-105 transition-all duration-300">
               Explore Templates
             </Button>
           </div>
@@ -323,10 +325,10 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="py-16 px-6 border-t border-gray-800/50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto fade-in-up">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div className="flex items-center space-x-3 mb-6 md:mb-0">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center neon-glow">
+            <div className="flex items-center space-x-3 mb-6 md:mb-0 group hover:scale-105 transition-transform duration-300">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center neon-glow group-hover:shadow-emerald-500/50 group-hover:shadow-2xl transition-all duration-300">
                 <span className="text-white font-bold text-xl">GG</span>
               </div>
               <div>
@@ -335,10 +337,10 @@ const Index = () => {
               </div>
             </div>
             <div className="flex space-x-8 text-gray-400">
-              <a href="#" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">Support Center</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">Documentation</a>
+              <a href="#" className="hover:text-emerald-400 transition-colors duration-300 hover:scale-110">Privacy Policy</a>
+              <a href="#" className="hover:text-emerald-400 transition-colors duration-300 hover:scale-110">Terms of Service</a>
+              <a href="#" className="hover:text-emerald-400 transition-colors duration-300 hover:scale-110">Support Center</a>
+              <a href="#" className="hover:text-emerald-400 transition-colors duration-300 hover:scale-110">Documentation</a>
             </div>
           </div>
           <div className="pt-8 border-t border-gray-800/50 text-center text-gray-400">
@@ -346,6 +348,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
