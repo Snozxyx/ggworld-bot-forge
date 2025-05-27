@@ -1,14 +1,10 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -35,7 +31,7 @@ const Header = () => {
               <span>English</span>
               <ChevronDown className="w-4 h-4" />
             </div>
-            <Button variant="outline" className="border-gray-600 text-gray-300 hover:text-white hover:border-gray-500">
+            <Button variant="outline" className="border-gray-600 hover:border-gray-500 text-emerald-400 bg-slate-50">
               Login/Register
             </Button>
             <Link to="/dashboard">
@@ -43,23 +39,19 @@ const Header = () => {
                 Start a challenge
               </Button>
             </Link>
-            <Button variant="outline" className="border-gray-600 text-gray-300 hover:text-white hover:border-gray-500">
+            <Button variant="outline" className="border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 bg-zinc-950 hover:bg-zinc-800">
               Free trial
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-800">
+        {isMenuOpen && <div className="md:hidden mt-4 pb-4 border-t border-gray-800">
             <div className="flex flex-col space-y-3 mt-4">
               <a href="#home" className="text-gray-300 hover:text-white transition-colors">Home</a>
               <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">How It Works</a>
@@ -69,11 +61,8 @@ const Header = () => {
                 Dashboard
               </Link>
             </div>
-          </div>
-        )}
+          </div>}
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;

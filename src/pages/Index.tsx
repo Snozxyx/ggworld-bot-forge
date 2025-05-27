@@ -310,11 +310,11 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/dashboard">
-              <Button className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white px-12 py-4 text-xl font-semibold rounded-xl neon-button">
+              <Button className="bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white text-xl font-semibold rounded-xl neon-button mx-[20px] px-[60px] py-[42px]">
                 Start Building Now
               </Button>
             </Link>
-            <Button variant="outline" className="border-2 border-emerald-600/50 text-emerald-400 hover:bg-emerald-600/10 hover:border-emerald-400 px-12 py-4 text-xl font-semibold rounded-xl neon-border">
+            <Button variant="outline" className="border-2 border-emerald-600/50 text-emerald-400 hover:bg-emerald-600/10 hover:border-emerald-400 text-xl font-semibold rounded-xl neon-border my-0 px-[25px] py-[39px]">
               Explore Templates
             </Button>
           </div>
