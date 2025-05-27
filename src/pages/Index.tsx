@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import FloatingElements from '@/components/FloatingElements';
 import { Button } from '@/components/ui/button';
@@ -6,10 +5,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Bot, Zap, Shield, Clock, Users, ArrowRight, Check, Star, Code, Layers, Settings, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+  return <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Header />
       <FloatingElements />
       
@@ -55,13 +52,13 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Link to="/dashboard">
-              <Button className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white px-10 py-4 text-xl font-semibold rounded-xl flex items-center space-x-3 neon-button">
+              <Button className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white text-xl font-semibold flex items-center space-x-3 neon-button rounded-lg px-[62px] py-[31px]">
                 <Rocket className="w-6 h-6" />
                 <span>Start Building Free</span>
                 <ArrowRight className="w-6 h-6" />
               </Button>
             </Link>
-            <Button variant="outline" className="border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 px-10 py-4 text-xl font-semibold rounded-xl neon-border">
+            <Button variant="outline" className="border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 px-10 text-xl font-semibold rounded-xl neon-border py-[27px]">
               Watch Demo
             </Button>
           </div>
@@ -147,22 +144,22 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-600/20 to-emerald-800/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Layers className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">Visual Block Builder</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-zinc-100">Visual Block Builder</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
                   Drag-and-drop interface to build complex Discord bot workflows. No coding knowledge required.
                 </p>
-                <ul className="space-y-3 text-sm">
+                <ul className="space-y-3 text-sm bg-white/0">
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Slash commands & interactions</span>
+                    <span className="text-zinc-50">Slash commands & interactions</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Event-driven automation</span>
+                    <span className="text-zinc-50">Event-driven automation</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Custom embeds & buttons</span>
+                    <span className="text-slate-50">Custom embeds & buttons</span>
                   </li>
                 </ul>
               </CardContent>
@@ -173,48 +170,48 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-600/20 to-cyan-800/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">AI-Powered Assistant</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-zinc-100">AI-Powered Assistant</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
                   Generate commands automatically, convert between blocks and code, get intelligent suggestions.
                 </p>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Natural language to bot commands</span>
+                    <span className="text-zinc-50">Natural language to bot commands</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Smart code explanations</span>
+                    <span className="text-zinc-50">Smart code explanations</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Automated bug detection</span>
+                    <span className="text-gray-50">Automated bug detection</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
             <Card className="bg-gray-900/50 border-gray-800/50 hover:border-purple-600/50 transition-all duration-500 group neon-card">
-              <CardContent className="p-8">
+              <CardContent className="p-8 ">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-600/20 to-purple-800/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Code className="w-8 h-8 text-purple-400" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">Pro Code Editor</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-gray-100">Pro Code Editor</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
                   Toggle to code mode for custom JavaScript or Python with full IDE features and AI assistance.
                 </p>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>JavaScript (Discord.js)</span>
+                    <span className="text-zinc-50">JavaScript (Discord.js)</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Python (discord.py)</span>
+                    <span className="text-zinc-50">Python (discord.py)</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>IntelliSense & debugging</span>
+                    <span className="text-zinc-100">IntelliSense & debugging</span>
                   </li>
                 </ul>
               </CardContent>
@@ -225,22 +222,22 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-pink-600/20 to-pink-800/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-8 h-8 text-pink-400" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">Modular System</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-zinc-100">Modular System</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
                   Pre-built modules for verification, moderation, tickets, logging, and more. Mix and match as needed.
                 </p>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Auto moderation suite</span>
+                    <span className="text-zinc-100">Auto moderation suite</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Advanced ticket system</span>
+                    <span className="text-zinc-100">Advanced ticket system</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Comprehensive audit logs</span>
+                    <span className="text-zinc-100">Comprehensive audit logs</span>
                   </li>
                 </ul>
               </CardContent>
@@ -251,22 +248,22 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-600/20 to-yellow-800/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Clock className="w-8 h-8 text-yellow-400" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">Instant Deployment</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-zinc-100">Instant Deployment</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
                   Deploy your bots instantly to our cloud infrastructure or export for self-hosting.
                 </p>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Global cloud hosting</span>
+                    <span className="text-zinc-100">Global cloud hosting</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Self-hosting export</span>
+                    <span className="text-zinc-100">Self-hosting export</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Automatic updates</span>
+                    <span className="text-zinc-100">Automatic updates</span>
                   </li>
                 </ul>
               </CardContent>
@@ -277,22 +274,22 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-600/20 to-emerald-800/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">Community Marketplace</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-zinc-100">Community Marketplace</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">
                   Share and discover bot templates, commands, and modules created by our community.
                 </p>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Thousands of templates</span>
+                    <span className="text-zinc-100">Thousands of templates</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Command library</span>
+                    <span className="text-zinc-100">Command library</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                    <span>Premium assets</span>
+                    <span className="text-zinc-100">Premium assets</span>
                   </li>
                 </ul>
               </CardContent>
@@ -349,8 +346,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
