@@ -1,33 +1,24 @@
-
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { MessageCircle, Mail, Book, Search, HelpCircle, Zap, Bot, Settings } from 'lucide-react';
-
 const Support = () => {
-  const faqs = [
-    {
-      question: "How do I create my first Discord bot?",
-      answer: "Start by logging in with Discord, then use our block-based builder to create commands and responses. Our AI assistant can help guide you through the process."
-    },
-    {
-      question: "Can I use custom code with GGWorld?",
-      answer: "Yes! You can switch between our visual block builder and a full code editor supporting JavaScript and Python for Discord bots."
-    },
-    {
-      question: "How many bots can I create?",
-      answer: "Free users can create up to 3 bots. Premium users get unlimited bots with advanced features and priority hosting."
-    },
-    {
-      question: "Is my bot data secure?",
-      answer: "Absolutely. All data is encrypted and we follow Discord's security guidelines. We never access your server content without permission."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  const faqs = [{
+    question: "How do I create my first Discord bot?",
+    answer: "Start by logging in with Discord, then use our block-based builder to create commands and responses. Our AI assistant can help guide you through the process."
+  }, {
+    question: "Can I use custom code with GGWorld?",
+    answer: "Yes! You can switch between our visual block builder and a full code editor supporting JavaScript and Python for Discord bots."
+  }, {
+    question: "How many bots can I create?",
+    answer: "Free users can create up to 3 bots. Premium users get unlimited bots with advanced features and priority hosting."
+  }, {
+    question: "Is my bot data secure?",
+    answer: "Absolutely. All data is encrypted and we follow Discord's security guidelines. We never access your server content without permission."
+  }];
+  return <div className="min-h-screen bg-black text-white">
       <Header />
       
       <div className="container mx-auto px-6 py-24">
@@ -42,10 +33,7 @@ const Support = () => {
             {/* Search */}
             <div className="max-w-xl mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <Input 
-                placeholder="Search for help articles..."
-                className="pl-10 bg-gray-900 border-gray-700 text-white"
-              />
+              <Input placeholder="Search for help articles..." className="pl-10 bg-gray-900 border-gray-700 text-white" />
             </div>
           </div>
 
@@ -71,7 +59,7 @@ const Support = () => {
                 <CardDescription>Send us a detailed message</CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full border-gray-600 text-gray-300">
+                <Button variant="outline" className="w-full border-gray-600 text-slate-950">
                   Send Email
                 </Button>
               </CardContent>
@@ -85,7 +73,7 @@ const Support = () => {
               </CardHeader>
               <CardContent>
                 <Link to="/how-it-works">
-                  <Button variant="outline" className="w-full border-gray-600 text-gray-300">
+                  <Button variant="outline" className="w-full border-gray-600 text-slate-950">
                     View Docs
                   </Button>
                 </Link>
@@ -135,16 +123,14 @@ const Support = () => {
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
             <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <Card key={index} className="bg-gray-900/50 border-gray-800">
+              {faqs.map((faq, index) => <Card key={index} className="bg-gray-900/50 border-gray-800">
                   <CardHeader>
                     <CardTitle className="text-white text-lg">{faq.question}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-300">{faq.answer}</p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
@@ -159,7 +145,7 @@ const Support = () => {
                 Contact Support
               </Button>
               <Link to="/">
-                <Button variant="outline" className="border-gray-600 text-gray-300">
+                <Button variant="outline" className="border-gray-600 text-slate-950">
                   Back to Home
                 </Button>
               </Link>
@@ -167,8 +153,6 @@ const Support = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Support;
