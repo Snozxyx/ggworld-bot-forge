@@ -1,109 +1,98 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Bot, Settings, Plus, Search, Bell, User, Zap, Globe, Users, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const BotDashboard = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Mock data for bot modules
-  const botModules = [
-    {
-      id: 1,
-      name: "Command Builder",
-      description: "Create custom slash commands for your bot",
-      icon: Bot,
-      status: "active",
-      premium: false,
-      category: "builders"
-    },
-    {
-      id: 2,
-      name: "Event Builder",
-      description: "Set up custom event handling for server events",
-      icon: Zap,
-      status: "active", 
-      premium: false,
-      category: "builders"
-    },
-    {
-      id: 3,
-      name: "Custom Commands",
-      description: "Create member slash commands for your server",
-      icon: Settings,
-      status: "inactive",
-      premium: false,
-      category: "featured"
-    },
-    {
-      id: 4,
-      name: "Custom Events",
-      description: "Create custom events for your server",
-      icon: Activity,
-      status: "active",
-      premium: false,
-      category: "featured"
-    },
-    {
-      id: 5,
-      name: "Timed Events",
-      description: "Schedule custom events for specific times",
-      icon: Globe,
-      status: "inactive",
-      premium: true,
-      category: "featured"
-    },
-    {
-      id: 6,
-      name: "Data Storage",
-      description: "Store custom variables for your bot",
-      icon: Users,
-      status: "active",
-      premium: false,
-      category: "featured"
-    },
-    {
-      id: 7,
-      name: "Webhooks",
-      description: "Handle webhook events through webhooks",
-      icon: Bot,
-      status: "inactive",
-      premium: false,
-      category: "server"
-    },
-    {
-      id: 8,
-      name: "IFTTT",
-      description: "Connect your bot to thousands of other apps",
-      icon: Zap,
-      status: "inactive",
-      premium: true,
-      category: "server"
-    }
-  ];
-
+  const botModules = [{
+    id: 1,
+    name: "Command Builder",
+    description: "Create custom slash commands for your bot",
+    icon: Bot,
+    status: "active",
+    premium: false,
+    category: "builders"
+  }, {
+    id: 2,
+    name: "Event Builder",
+    description: "Set up custom event handling for server events",
+    icon: Zap,
+    status: "active",
+    premium: false,
+    category: "builders"
+  }, {
+    id: 3,
+    name: "Custom Commands",
+    description: "Create member slash commands for your server",
+    icon: Settings,
+    status: "inactive",
+    premium: false,
+    category: "featured"
+  }, {
+    id: 4,
+    name: "Custom Events",
+    description: "Create custom events for your server",
+    icon: Activity,
+    status: "active",
+    premium: false,
+    category: "featured"
+  }, {
+    id: 5,
+    name: "Timed Events",
+    description: "Schedule custom events for specific times",
+    icon: Globe,
+    status: "inactive",
+    premium: true,
+    category: "featured"
+  }, {
+    id: 6,
+    name: "Data Storage",
+    description: "Store custom variables for your bot",
+    icon: Users,
+    status: "active",
+    premium: false,
+    category: "featured"
+  }, {
+    id: 7,
+    name: "Webhooks",
+    description: "Handle webhook events through webhooks",
+    icon: Bot,
+    status: "inactive",
+    premium: false,
+    category: "server"
+  }, {
+    id: 8,
+    name: "IFTTT",
+    description: "Connect your bot to thousands of other apps",
+    icon: Zap,
+    status: "inactive",
+    premium: true,
+    category: "server"
+  }];
   const stats = {
     totalModules: 15,
     activeModules: 8,
     totalCommands: 45,
     serverMembers: 1250
   };
-
   const getStatusColor = (status: string) => {
     return status === 'active' ? 'bg-emerald-500' : 'bg-gray-500';
   };
-
   const getCategoryTitle = (category: string) => {
-    switch(category) {
-      case 'builders': return 'Builders';
-      case 'featured': return 'Featured & Favourited';
-      case 'server': return 'Server Management';
-      default: return 'Other';
+    switch (category) {
+      case 'builders':
+        return 'Builders';
+      case 'featured':
+        return 'Featured & Favourited';
+      case 'server':
+        return 'Server Management';
+      default:
+        return 'Other';
     }
   };
-
   const groupedModules = botModules.reduce((acc, module) => {
     if (!acc[module.category]) {
       acc[module.category] = [];
@@ -111,9 +100,7 @@ const BotDashboard = () => {
     acc[module.category].push(module);
     return acc;
   }, {} as Record<string, typeof botModules>);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-zinc-900 to-black">
+  return <div className="min-h-screen bg-gradient-to-br from-zinc-950 via-zinc-900 to-black">
       {/* Header */}
       <header className="border-b border-white/10 bg-black/20 backdrop-blur-xl">
         <div className="flex items-center justify-between px-6 py-4">
@@ -126,13 +113,7 @@ const BotDashboard = () => {
             </Link>
             <div className="relative ml-8">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-              <input
-                type="text"
-                placeholder="Search modules..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 w-64"
-              />
+              <input type="text" placeholder="Search modules..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="bg-white/5 border border-white/10 rounded-lg pl-10 pr-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 w-64" />
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -252,15 +233,13 @@ const BotDashboard = () => {
             </div>
 
             {/* Module Sections */}
-            {Object.entries(groupedModules).map(([category, modules]) => (
-              <div key={category} className="space-y-4">
+            {Object.entries(groupedModules).map(([category, modules]) => <div key={category} className="space-y-4">
                 <div className="flex items-center justify-between">
                   <h2 className="text-2xl font-bold text-white">{getCategoryTitle(category)}</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {modules.map((module) => (
-                    <Card key={module.id} className="bg-black/40 backdrop-blur-xl border-white/10 hover:border-emerald-400/50 transition-all duration-300 group relative overflow-hidden">
+                  {modules.map(module => <Card key={module.id} className="bg-black/40 backdrop-blur-xl border-white/10 hover:border-emerald-400/50 transition-all duration-300 group relative overflow-hidden">
                       {/* Gradient blur background */}
                       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-cyan-500/5 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
                       
@@ -269,11 +248,9 @@ const BotDashboard = () => {
                           <div className="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center border border-white/10">
                             <module.icon className="w-6 h-6 text-emerald-400" />
                           </div>
-                          {module.premium && (
-                            <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                          {module.premium && <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium">
                               PRO
-                            </span>
-                          )}
+                            </span>}
                         </div>
                         <div className="flex items-center space-x-2 mt-3">
                           <div className={`w-2 h-2 rounded-full ${getStatusColor(module.status)}`} />
@@ -283,31 +260,20 @@ const BotDashboard = () => {
                       <CardContent className="space-y-4 relative z-10">
                         <p className="text-gray-400 text-sm">{module.description}</p>
                         <div className="flex space-x-2">
-                          <Button 
-                            size="sm" 
-                            className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white"
-                          >
+                          <Button size="sm" className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white">
                             Configure
                           </Button>
-                          <Button 
-                            size="sm" 
-                            variant="outline" 
-                            className="border-white/10 text-gray-300 hover:text-white"
-                          >
+                          <Button size="sm" variant="outline" className="border-white/10 text-slate-950">
                             <Settings className="w-4 h-4" />
                           </Button>
                         </div>
                       </CardContent>
-                    </Card>
-                  ))}
+                    </Card>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </main>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default BotDashboard;
