@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -93,10 +92,12 @@ const Dashboard = () => {
                     <Bot className="w-4 h-4 mr-3" />
                     Dashboard
                   </Button>
-                  <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white">
-                    <Zap className="w-4 h-4 mr-3" />
-                    My Bots
-                  </Button>
+                  <Link to="/bot-dashboard">
+                    <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white">
+                      <Zap className="w-4 h-4 mr-3" />
+                      Bot Modules
+                    </Button>
+                  </Link>
                   <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white">
                     <Users className="w-4 h-4 mr-3" />
                     Analytics
