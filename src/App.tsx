@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +17,7 @@ import BotDashboard from "./pages/BotDashboard";
 import CommandBuilder from "./pages/CommandBuilder";
 import BotSettings from "./pages/BotSettings";
 import GlobalSettings from "./pages/GlobalSettings";
+import ModuleConfig from "./pages/ModuleConfig";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,7 @@ const App = () => (
           <Route path="/command-builder" element={<CommandBuilder />} />
           <Route path="/bot-settings" element={<BotSettings />} />
           <Route path="/global-settings" element={<GlobalSettings />} />
+          <Route path="/module-config" element={<ModuleConfig />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/support" element={<Support />} />
