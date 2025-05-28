@@ -12,6 +12,7 @@ import Terms from "./pages/Terms";
 import Support from "./pages/Support";
 import HowItWorks from "./pages/HowItWorks";
 import ComingSoon from "./pages/ComingSoon";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/support" element={<Support />} />
